@@ -1,0 +1,8 @@
+version: '0'
+
+services:
+  nasm:
+    container_name: nasm
+    image: nasm:latest
+    volumes:
+     - .:/code

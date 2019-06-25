@@ -1,8 +1,8 @@
-# assemble and run NASM program in macOS
+# assemble and run NASM program inside nasm Docker
 
 cd macros
 
-nasm -f macho64 ${1}.asm
-ld -macosx_version_min 10.7.0 -lSystem -o ${1} ${1}.o
+nasm -f elf64 ${1}.asm
+ld -o ${1} ${1}.o
 
 ./${1}
