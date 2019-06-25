@@ -1,8 +1,8 @@
 # assemble and run NASM program in macOS
 
-cd examples
+cd macros
 
 nasm -f macho64 ${1}.asm
-ld -macosx_version_min 10.7.0 -lSystem -o ${1} ${1}.o asm_io.o
+ld -macosx_version_min 10.7.0 -lSystem -o ${1} ${1}.o
 
 ./${1}
