@@ -1,7 +1,8 @@
 FROM ubuntu:18.04 AS build
 
-RUN apt update && \
-    apt -y install gcc
+RUN apt update
+
+RUN apt-get -y install gcc-multilib
 
 RUN apt-get install nasm
 
