@@ -1,0 +1,22 @@
+GRUPO 7
+
+14/0162241 - Samuel Venzi Lima Monteiro de Oliveira 
+18/0137816 - Manoel Vieira Coelho Neto
+15/0122969 - David Potolski Lafeta
+13/0015083 - Matheus Barbosa de Miranda
+13/0126861 - Matheus Vieira Fernandes
+
+
+Instruções de compilação para Macros
+
+nasm -f elf -d ELF_TYPE -o asm_io.o asm_io.asm
+nasm -f elf -o macro.o macro.asm
+gcc -m32 -o macro macro.o macro.c asm_io.o 
+
+
+
+Instruções de compilação para LFSR
+
+nasm -f elf -d ELF_TYPE -o asm_io.o asm_io.asm
+nasm -f elf -o lfsr.o lfsr.asm
+gcc -m32 -o lfsr lfsr.o asm_io.o 
